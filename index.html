@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bezē · konditoreja un kulinārija · Blaumaņa iela 7, Rīga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito:wght@400;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Art direction: chocolate from the drip cake and the old wood, cream like the doily, raspberry from
+   the berries — their own price tags, their chalkboard, the grandmother's chest of drawers. */
+:root{
+  color-scheme:light;
+  --choc:#2b1810; --choc-2:#3a2418; --cream:#f7efe3; --paper:#fffaf2; --tag:#fffdf8; --rasp:#c9375c; --rasp-2:#a52b4a;
+  --pist:#9fbf7a; --ink:#241a14; --mut:#8a7b6e; --rule:#e4d8c6; --chalk:#1f1f1d; --oak:#7a5230;
+  --disp:"Young Serif",Georgia,serif; --sans:"Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; --hand:"Caveat","Bradley Hand",cursive;
+  --pad:28px; --edge:max(28px,calc((100vw - 1104px)/2));
+}
+*{box-sizing:border-box}
+html{background:var(--cream)}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit} img{display:block;max-width:100%;height:auto}
+[data-lang][hidden]{display:none!important}
+.wrap{max-width:1160px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+h1,h2,h3{font-family:var(--disp);font-weight:400;letter-spacing:-.01em;margin:0}
+.cap{font:800 .68rem/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.notice{background:#160c08;color:#cbbfae;font:600 .74rem/1.4 var(--sans);text-align:center;padding:8px 20px}.notice b{color:#fff}
+.tag{display:inline-block;background:var(--tag);color:var(--rasp);font:700 1.25rem/1 var(--hand);padding:.38em .75em .3em;box-shadow:0 3px 0 rgba(0,0,0,.12);clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font:800 .82rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:1.2em 1.5em;border-radius:40px;border:2px solid currentColor;white-space:nowrap;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.fill{background:var(--rasp);border-color:var(--rasp);color:#fff}
+
+/* mast */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px;padding-bottom:16px;background:var(--choc);color:var(--cream)}
+.mast .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%}
+.mast h1{font-size:1.6rem} .mast h1 span{font:700 .9rem/1 var(--hand);color:var(--pist);margin-left:.4em}
+.langs{display:flex;border:1px solid rgba(247,239,227,.4);border-radius:30px;overflow:hidden}
+.langs button{border:0;background:transparent;color:var(--cream);font:800 .7rem/1 var(--sans);letter-spacing:.1em;padding:.7em .95em;cursor:pointer}
+.langs button[aria-pressed=true]{background:var(--cream);color:var(--choc)}
+
+/* hero: their own chocolate cake, and their own sentence */
+.hero{display:grid;grid-template-columns:1fr 1fr;background:var(--choc);color:var(--cream);min-height:min(84vh,760px)}
+.hero .txt{display:flex;flex-direction:column;justify-content:center;padding:60px 56px 64px var(--edge)}
+.hero h2{font-size:clamp(2.4rem,4.6vw,4.2rem);line-height:1.04;color:#fff;margin:.2em 0 .25em}
+.hero h2 q{quotes:"„" "”"} .hero .who{margin:0 0 1.6em;color:#cdbfad;font-size:.95rem}
+.hero p.lead{margin:0 0 1.8em;max-width:28em;color:#e6dccb;font-size:1.06rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero .btn{color:var(--cream)}
+.now{display:inline-flex;align-items:center;gap:.6em;margin:1.6em 0 0;padding:.55em 1em .55em .8em;border-radius:40px;background:rgba(255,255,255,.08);font:700 .9rem/1.2 var(--sans);color:#f0e6d6}
+.now:before{content:"";width:.65em;height:.65em;border-radius:50%;background:var(--pist)} .now.shut:before{background:#9a8a7a}
+.hero .pic{position:relative;overflow:hidden} .hero .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.hero .pic .tag{position:absolute;left:26px;bottom:26px;transform:rotate(-3deg);font-size:1.5rem}
+
+/* the three they come for */
+.sig{background:var(--choc-2);color:var(--cream);padding:88px 0 96px}
+.sig .head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:38px}
+.sig h2{font-size:clamp(2rem,3.6vw,3rem);color:#fff} .sig .head p{margin:0;color:#cdbfad;max-width:30em}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.dish{position:relative;margin:0} .dish img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.dish .tag{position:absolute;left:14px;top:14px;transform:rotate(-4deg)}
+.dish h3{margin:.8em 0 .2em;font-size:1.45rem;color:#fff} .dish p{margin:0;color:#cdbfad;font-size:.96rem}
+
+/* the counter, on a paper menu card */
+.menu{padding:88px 0 80px}
+.card{background:var(--paper);border:1px solid var(--rule);outline:1px solid var(--rule);outline-offset:-8px;padding:44px 46px 40px;box-shadow:0 22px 40px rgba(60,40,20,.1)}
+.card .head{text-align:center;margin-bottom:30px} .card h2{font-size:clamp(1.9rem,3.2vw,2.6rem)} .card .head p{margin:.4em 0 0;color:var(--mut);font-size:.95rem}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px}
+.group h3{font-size:1.2rem;padding-bottom:.4em;margin-bottom:.5em;border-bottom:2px solid var(--choc)}
+.row{display:flex;align-items:baseline;gap:8px;padding:.45em 0;font-size:1rem}
+.row .n{flex:0 1 auto} .row .dots{flex:1 1 20px;border-bottom:2px dotted #cbbfab;margin-bottom:.35em;min-width:20px}
+.row .p{font:700 1.3rem/1 var(--hand);color:var(--rasp);white-space:nowrap}
+.row.star .n:after{content:" ★";color:var(--rasp);font-size:.85em}
+.card .foot{margin:26px 0 0;text-align:center;font-size:.86rem;color:var(--mut)}
+
+/* the chalkboard */
+.board{background:var(--chalk);color:#f3ede1;border:12px solid var(--oak);box-shadow:inset 0 0 0 2px #5a3a22,0 20px 40px rgba(0,0,0,.35);padding:44px 48px;display:grid;grid-template-columns:1fr 1fr;gap:34px 60px;font:500 1.55rem/1.3 var(--hand)}
+.boardwrap{padding:0 0 88px}
+.board .cap{color:#b9b0a0;font-family:var(--sans);margin-bottom:.3em;display:block}
+.board h3{font:700 2.3rem/1.1 var(--hand);color:#fff;margin:0 0 .25em} .board p{margin:0;color:#e8e0d0}
+.board .drinks{grid-column:1/3;border-top:1px dashed rgba(255,255,255,.3);padding-top:.9em;color:#d9d0be;font-size:1.35rem}
+
+/* the story: the grandmother's chest, drawer by drawer */
+.story{background:var(--cream);padding:88px 0 96px}
+.story .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.chest{background:#5a3a26;border-radius:8px;padding:14px;box-shadow:0 24px 48px rgba(40,20,10,.35);border:1px solid #3d2617}
+.drawer{position:relative;background:#6b4630;border:1px solid #3d2617;border-radius:3px;padding:24px 62px 22px 26px;color:#f7efe3;margin-bottom:10px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.drawer:last-child{margin-bottom:0}
+.drawer:before{content:"";position:absolute;right:22px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f4d98f,#8a6a2c 70%);box-shadow:0 1px 2px rgba(0,0,0,.5)}
+.drawer blockquote{margin:0;font:400 1.22rem/1.4 var(--disp)} .drawer cite{display:block;margin-top:.7em;font:800 .66rem/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#d9c39a;font-style:normal}
+.drawer p{margin:0;font-size:.98rem;color:#efe4d2} .drawer .cap{color:#d9c39a;display:block;margin-bottom:.5em}
+.story figure{margin:0;position:relative} .story figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.story figcaption{position:absolute;left:16px;bottom:16px}
+
+/* cakes to order: a composer, on raspberry */
+.order{background:var(--rasp);color:#fff;padding:88px 0 96px}
+.order .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.order h2{font-size:clamp(2.1rem,3.8vw,3.2rem);color:#fff;margin:.2em 0 .4em} .order .lead{margin:0 0 1.4em;color:#ffe3ea;max-width:26em}
+.order blockquote{margin:0;padding-left:18px;border-left:3px solid #ffd2dc;font:400 1.1rem/1.45 var(--disp);color:#fff} .order cite{display:block;margin-top:.6em;font:800 .64rem/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#ffd2dc;font-style:normal}
+.comp{background:var(--paper);color:var(--ink);border-radius:12px;padding:30px 30px 26px;box-shadow:0 24px 48px rgba(80,20,40,.35)}
+.comp .cap{display:block;margin:0 0 .6em;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1.4em}
+.chips button{border:1.5px solid #d9cdb9;background:#fff;color:var(--ink);font:700 .93rem/1 var(--sans);padding:.7em 1em;border-radius:30px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--choc);border-color:var(--choc);color:#fff}
+.comp input{width:100%;background:#fff;border:1.5px solid #d9cdb9;color:var(--ink);font:600 1rem/1.4 var(--sans);padding:.75em 1em;margin:0 0 1.4em;border-radius:10px}
+.preview{background:var(--cream);border-radius:10px;padding:18px 20px 16px}
+.preview pre{margin:.2em 0 1.1em;white-space:pre-wrap;font:600 .98rem/1.55 var(--sans)}
+.send{display:flex;gap:10px;flex-wrap:wrap} .send .btn{font-size:.72rem;padding:1.05em 1.2em} .send .wa{background:var(--choc);border-color:var(--choc);color:#fff}
+.tiny{margin:1em 0 0;font-size:.8rem;color:var(--mut)}
+
+/* guests */
+.guests{padding:88px 0 90px;position:relative}
+.guests .head{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.guests h2{font-size:clamp(2rem,3.4vw,2.8rem)}
+.sticker{width:124px;height:124px;border-radius:50%;background:var(--rasp);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-8deg);box-shadow:0 10px 24px rgba(160,40,70,.35);font:800 .6rem/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.sticker b{font:400 2rem/1 var(--disp);letter-spacing:0;margin-bottom:.15em}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.q{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:26px 26px 22px}
+.q .cap{display:block;margin-bottom:.8em;color:var(--rasp)} .q p{margin:0 0 .9em;font:400 1.12rem/1.42 var(--disp)} .q span{font:800 .64rem/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+
+/* where: two counters */
+.visit{background:var(--choc);color:var(--cream);padding:88px 0 60px}
+.visit h2{font-size:clamp(2rem,3.4vw,2.8rem);color:#fff;margin-bottom:.9em}
+.places{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.place{background:var(--cream);color:var(--ink);border-radius:12px;padding:30px 30px 26px}
+.place .cap{display:block;margin-bottom:.7em} .place h3{font-size:1.9rem;line-height:1.1} .place .sub{margin:.2em 0 1.1em;color:var(--mut)}
+.place .hrs{margin:0 0 1.2em;font-size:.95rem} .place .hrs b{font-weight:800}
+.acts{display:flex;flex-wrap:wrap;gap:10px} .acts .btn{font-size:.72rem;padding:1.05em 1.2em;color:var(--ink)} .acts .btn.fill{color:#fff}
+.place.small{background:#f0e4d2}
+.links{margin:26px 0 0;display:flex;gap:18px;flex-wrap:wrap;color:#cdbfad;font-weight:700} .links a{color:var(--cream)}
+.next{margin:48px 0 0;padding:22px 26px;border:1.5px dashed rgba(247,239,227,.4);border-radius:10px;color:#e6dccb} .next p{margin:.5em 0 0}
+footer{background:var(--choc);padding:26px 0 48px;color:#a8988a;font:400 .82rem/1.7 var(--sans)} footer b{color:var(--cream)}
+.sticky{display:none}
+
+@media(max-width:860px){
+  :root{--pad:22px}
+  .mast h1{font-size:1.45rem}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero .pic{order:-1;aspect-ratio:4/5} .hero .pic img{object-position:50% 50%}
+  .hero .txt{padding:30px var(--pad) 44px} .hero h2{font-size:clamp(2rem,9vw,2.6rem)} .hero p.lead{font-size:1rem}
+  .cta{display:grid;grid-template-columns:1.1fr 1fr} .btn{font-size:.74rem;padding:1.2em 1em;letter-spacing:.08em}
+  .sig{padding:56px 0 60px} .dishes{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 calc(var(--pad)*-1);padding:4px var(--pad) 10px}
+  .dishes::-webkit-scrollbar{display:none} .dish{flex:0 0 82%;scroll-snap-align:center}
+  .menu{padding:56px 0 50px} .card{padding:30px 22px 26px} .groups{grid-template-columns:1fr;gap:22px}
+  .boardwrap{padding-bottom:56px} .board{grid-template-columns:1fr;gap:22px;padding:26px 22px;border-width:9px;font-size:1.4rem} .board .drinks{grid-column:auto}
+  .story{padding:56px 0 60px} .story .grid{grid-template-columns:1fr;gap:28px} .drawer{padding:20px 52px 18px 20px}
+  .order{padding:56px 0 60px} .order .grid{grid-template-columns:1fr;gap:28px} .comp{padding:22px 18px 20px}
+  .guests{padding:56px 0 56px} .qs{grid-template-columns:1fr;gap:14px} .sticker{width:104px;height:104px}
+  .visit{padding:56px 0 40px} .places{grid-template-columns:1fr} .acts{display:grid;grid-template-columns:1fr 1fr} .acts .fill{grid-column:1/3}
+  body{padding-bottom:58px}
+  .sticky{display:grid;grid-template-columns:1.2fr 1fr;position:fixed;inset:auto 0 0 0;z-index:9}
+  .sticky a{display:flex;justify-content:center;align-items:center;text-decoration:none;padding:17px 8px;font:800 .78rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--rasp);color:#fff}
+  .sticky a+a{background:var(--cream);color:var(--choc)}
+}
+/* pass 2026-09-19: price-tag buttons instead of pills, no reflex caps, phone first screen, one sticky action */
+.cap{text-transform:none;letter-spacing:.01em;font-size:.86rem;font-weight:700}
+.q span{text-transform:none;letter-spacing:.01em;font-size:.8rem}
+.btn{border-radius:2px;position:relative;padding-left:2.1em}
+.send .btn,.acts .btn{padding-left:2.1em}
+.btn::before{content:"";position:absolute;left:.75em;top:50%;width:7px;height:7px;margin-top:-5px;border-radius:50%;border:1.5px solid currentColor;opacity:.75}
+.chips button{border-radius:2px}
+.next{border:0;border-top:1px solid rgba(247,239,227,.3);border-radius:0;padding:18px 0 0;margin-top:40px}
+@media(max-width:860px){
+  .hero .pic{aspect-ratio:auto;height:42vh} .hero .pic .tag{font-size:1.25rem;left:16px;bottom:16px}
+  .hero .txt{padding:18px var(--pad) 26px} .hero h2{margin:.1em 0 .2em} .hero .who{margin-bottom:.9em} .hero p.lead{margin-bottom:0}
+  .hero .cta{display:none}
+  .sig,.menu,.story,.order,.guests{padding-top:40px;padding-bottom:40px} .visit{padding:40px 0 36px} .boardwrap{padding-bottom:40px}
+  .sticky{grid-template-columns:1fr} .sticky a+a{display:none}
+}
+.langs{border-radius:3px}
+.now{border-radius:2px}
+</style>
+</head>
+<body>
+<div class="notice"><b>Nikita</b> ·
+  <span data-lang="lv">Nesaistošs dizaina priekšlikums. Šī nav konditorejas oficiālā mājaslapa.</span>
+  <span data-lang="ru" hidden>Дизайн-предложение без обязательств. Это не официальный сайт кондитерской.</span>
+  <span data-lang="en" hidden>A non-binding design proposal. This is not the confectionery's official website.</span>
+</div>
+
+<header class="mast"><div class="wrap">
+  <h1>Bezē <span data-lang="lv">konditoreja un kulinārija</span><span data-lang="ru" hidden>кондитерская и кулинария</span><span data-lang="en" hidden>confectionery &amp; deli</span></h1>
+  <div class="langs" role="group" aria-label="Valoda"><button data-set="lv" aria-pressed="true">LV</button><button data-set="ru" aria-pressed="false">RU</button><button data-set="en" aria-pressed="false">EN</button></div>
+</div></header>
+
+<section class="hero">
+  <div class="txt">
+    <div data-lang="lv">
+      <span class="cap" style="color:#cdbfad">Blaumaņa iela 7 · kopš 2014</span>
+      <h2><q>kā ciemos pie omītes</q></h2>
+      <p class="who">— tā par Bezē saka pašas saimnieces (Swedbank intervija, 2019)</p>
+      <p class="lead">Maza konditoreja pie Tērbatas stūra. Eklēri ar mājās vārītu krēmu, bezē, kūkas un pusdienas — un vecmāmiņas kumode, kas te stāv kopš pirmās dienas.</p>
+      <div class="cta"><a class="btn fill" href="#pasutit">Pasūtīt kūku</a><a class="btn" href="tel:+37122033883">22 033 883</a></div>
+      <p class="now" id="now-lv" hidden></p>
+    </div>
+    <div data-lang="ru" hidden>
+      <span class="cap" style="color:#cdbfad">Ул. Блауманя 7 · с 2014 года</span>
+      <h2><q>как в гостях у бабушки</q></h2>
+      <p class="who">— так о Bezē говорят сами хозяйки (интервью Swedbank, 2019 · перевод)</p>
+      <p class="lead">Маленькая кондитерская у угла Тербатас. Эклеры с домашним кремом, безе, торты и обеды — и бабушкин комод, который стоит здесь с первого дня.</p>
+      <div class="cta"><a class="btn fill" href="#pasutit">Заказать торт</a><a class="btn" href="tel:+37122033883">22 033 883</a></div>
+      <p class="now" id="now-ru" hidden></p>
+    </div>
+    <div data-lang="en" hidden>
+      <span class="cap" style="color:#cdbfad">Blaumaņa iela 7 · since 2014</span>
+      <h2><q>like visiting your grandmother</q></h2>
+      <p class="who">— how the owners describe Bezē (Swedbank interview, 2019 · translated)</p>
+      <p class="lead">A small confectionery at the corner of Tērbatas. Éclairs with home-made cream, meringues, cakes and lunch — and a grandmother's chest of drawers that has stood here since day one.</p>
+      <div class="cta"><a class="btn fill" href="#pasutit">Order a cake</a><a class="btn" href="tel:+37122033883">22 033 883</a></div>
+      <p class="now" id="now-en" hidden></p>
+    </div>
+  </div>
+  <div class="pic">
+    <picture><source media="(max-width:860px)" srcset="img/hero-m.jpg"><img src="img/hero.jpg" alt="Bezē šokolādes kūka ar ogām un vīģēm" width="1400" height="2100" fetchpriority="high"></picture>
+    <span class="tag"><span data-lang="lv">pašu cepta</span><span data-lang="ru" hidden>своя выпечка</span><span data-lang="en" hidden>baked here</span></span>
+  </div>
+</section>
+
+<main>
+<section class="sig"><div class="wrap">
+  <div class="head">
+    <div data-lang="lv"><span class="cap" style="color:#cdbfad">Vitrīnā</span><h2>Trīs, pēc kā nāk.</h2></div>
+    <div data-lang="ru" hidden><span class="cap" style="color:#cdbfad">В витрине</span><h2>Три, за которыми приходят.</h2></div>
+    <div data-lang="en" hidden><span class="cap" style="color:#cdbfad">In the case</span><h2>The three people come for.</h2></div>
+    <p data-lang="lv">Cenas — kā uz vitrīnas kartītēm; var mainīties.</p>
+    <p data-lang="ru" hidden>Цены — как на карточках в витрине; могут меняться.</p>
+    <p data-lang="en" hidden>Prices as on the case tags; they may change.</p>
+  </div>
+  <div class="dishes">
+    <figure class="dish"><img src="img/pistacija.jpg" alt="Pistāciju–upeņu kūciņa" loading="lazy" width="1200" height="960"><span class="tag">4,50</span>
+      <div data-lang="lv"><h3>Pistāciju–upeņu kūciņa</h3><p>Viesu „must have”.</p></div>
+      <div data-lang="ru" hidden><h3>Фисташково-смородиновое пирожное</h3><p>«Must have» гостей.</p></div>
+      <div data-lang="en" hidden><h3>Pistachio &amp; blackcurrant cake</h3><p>The guests' "must have".</p></div></figure>
+    <figure class="dish"><img src="img/ekleri.jpg" alt="Eklēri ar pistāciju un balto glazūru" loading="lazy" width="800" height="600">
+      <div data-lang="lv"><h3>Eklēri ar vārīto krēmu</h3><p>Pistāciju, karameļu — pēc Aritas Jurcikas receptēm. Visvairāk pasūtītie Wolt.</p></div>
+      <div data-lang="ru" hidden><h3>Эклеры с заварным кремом</h3><p>Фисташковые, карамельные — по рецептам Ариты Юрцики. Самые заказываемые в Wolt.</p></div>
+      <div data-lang="en" hidden><h3>Éclairs with home-boiled cream</h3><p>Pistachio, caramel — Arita Jurcika's recipes. The most ordered on Wolt.</p></div></figure>
+    <figure class="dish"><img src="img/pavlova.jpg" alt="Pavlova ar svaigām ogām" loading="lazy" width="1200" height="900"><span class="tag">4,90</span>
+      <div data-lang="lv"><h3>Pavlova</h3><p>Bezē, putukrējums un svaigas ogas.</p></div>
+      <div data-lang="ru" hidden><h3>Павлова</h3><p>Безе, взбитые сливки и свежие ягоды.</p></div>
+      <div data-lang="en" hidden><h3>Pavlova</h3><p>Meringue, whipped cream and fresh berries.</p></div></figure>
+  </div>
+</div></section>
+
+<section class="menu"><div class="wrap"><div class="card">
+  <div class="head">
+    <div data-lang="lv"><h2>Pie letes</h2><p>Pārējais — sakārtots kā pie letes. ★ Wolt visvairāk pasūtītie.</p></div>
+    <div data-lang="ru" hidden><h2>У прилавка</h2><p>Остальное — как у прилавка. ★ самые заказываемые в Wolt.</p></div>
+    <div data-lang="en" hidden><h2>At the counter</h2><p>The rest, as at the counter. ★ most ordered on Wolt.</p></div>
+  </div>
+  <div class="groups">
+    <div class="group">
+      <h3><span data-lang="lv">Kūkas</span><span data-lang="ru" hidden>Торты</span><span data-lang="en" hidden>Cakes</span></h3>
+      <div class="row star"><span class="n"><span data-lang="lv">Šokolādes Napoleons</span><span data-lang="ru" hidden>Шоколадный Наполеон</span><span data-lang="en" hidden>Chocolate Napoleon</span></span><span class="dots"></span><span class="p">3,80</span></div>
+      <div class="row star"><span class="n"><span data-lang="lv">Medus kūka</span><span data-lang="ru" hidden>Медовик</span><span data-lang="en" hidden>Honey cake</span></span><span class="dots"></span><span class="p">3,20</span></div>
+      <div class="row"><span class="n"><span data-lang="lv">Biezpiena plātsmaize</span><span data-lang="ru" hidden>Творожный пирог</span><span data-lang="en" hidden>Curd cheesecake</span></span><span class="dots"></span><span class="p">2,90</span></div>
+      <div class="row star"><span class="n"><span data-lang="lv">Vēja kūka ar vārīto krēmu</span><span data-lang="ru" hidden>Заварное с кремом</span><span data-lang="en" hidden>Cream puff with boiled cream</span></span><span class="dots"></span><span class="p">2,50</span></div>
+    </div>
+    <div class="group">
+      <h3><span data-lang="lv">Kūciņas un tartes</span><span data-lang="ru" hidden>Пирожные и тарты</span><span data-lang="en" hidden>Pastries &amp; tarts</span></h3>
+      <div class="row"><span class="n"><span data-lang="lv">Kazeņu tarte ar balto šokolādi</span><span data-lang="ru" hidden>Тарт с ежевикой и белым шоколадом</span><span data-lang="en" hidden>Blackberry tart, white chocolate</span></span><span class="dots"></span><span class="p">3,80</span></div>
+      <div class="row"><span class="n"><span data-lang="lv">Zefīra grozīņi</span><span data-lang="ru" hidden>Корзиночки с зефиром</span><span data-lang="en" hidden>Marshmallow baskets</span></span><span class="dots"></span><span class="p">1,90</span></div>
+      <div class="row"><span class="n"><span data-lang="lv">Saldā lēdija</span><span data-lang="ru" hidden>Сладкая леди</span><span data-lang="en" hidden>Saldā lēdija</span></span><span class="dots"></span><span class="p">1,90</span></div>
+    </div>
+    <div class="group">
+      <h3><span data-lang="lv">Našķi</span><span data-lang="ru" hidden>Сладости</span><span data-lang="en" hidden>Treats</span></h3>
+      <div class="row"><span class="n"><span data-lang="lv">Riekstu našķis</span><span data-lang="ru" hidden>Ореховое лакомство</span><span data-lang="en" hidden>Nut treat</span></span><span class="dots"></span><span class="p">2,90</span></div>
+      <div class="row"><span class="n"><span data-lang="lv">Skudrupūznis</span><span data-lang="ru" hidden>Муравейник</span><span data-lang="en" hidden>Anthill cake</span></span><span class="dots"></span><span class="p">1,80</span></div>
+      <div class="row"><span class="n"><span data-lang="lv">Vegānu našķis</span><span data-lang="ru" hidden>Веганское лакомство</span><span data-lang="en" hidden>Vegan treat</span></span><span class="dots"></span><span class="p">1,70</span></div>
+    </div>
+  </div>
+  <p class="foot"><span data-lang="lv">Kafija · tēja · smūtiji un svaigi spiestas sulas · vīns · Aperol · piegāde ar Wolt</span><span data-lang="ru" hidden>Кофе · чай · смузи и свежевыжатые соки · вино · Aperol · доставка Wolt</span><span data-lang="en" hidden>Coffee · tea · smoothies and fresh juices · wine · Aperol · delivery by Wolt</span></p>
+</div></div></section>
+
+<section class="boardwrap"><div class="wrap"><div class="board">
+  <div>
+    <span class="cap"><span data-lang="lv">Katru darba dienu</span><span data-lang="ru" hidden>Каждый будний день</span><span data-lang="en" hidden>Every weekday</span></span>
+    <h3><span data-lang="lv">Pusdienas</span><span data-lang="ru" hidden>Обеды</span><span data-lang="en" hidden>Lunch</span></h3>
+    <p data-lang="lv">Bezē pusdienu piedāvājums un kulinārija līdzņemšanai — ne tikai saldais.</p>
+    <p data-lang="ru" hidden>Обеденное предложение и кулинария с собой — не только сладкое.</p>
+    <p data-lang="en" hidden>The lunch offer and deli to take away — not only sweets.</p>
+  </div>
+  <div>
+    <span class="cap"><span data-lang="lv">Sezonā</span><span data-lang="ru" hidden>Сезонное</span><span data-lang="en" hidden>Seasonal</span></span>
+    <h3><span data-lang="lv">Helovīna našķi</span><span data-lang="ru" hidden>Угощения к Хэллоуину</span><span data-lang="en" hidden>Halloween treats</span></h3>
+    <p data-lang="lv">Un kūkas 18. novembrim.</p>
+    <p data-lang="ru" hidden>И торты к 18 ноября.</p>
+    <p data-lang="en" hidden>And cakes for 18 November.</p>
+  </div>
+  <p class="drinks"><span data-lang="lv">Tāfeles saturs — kā Wolt sadaļās; mainās līdzi sezonai.</span><span data-lang="ru" hidden>Содержимое доски — как в разделах Wolt; меняется по сезону.</span><span data-lang="en" hidden>What's on the board follows the Wolt sections; it changes with the season.</span></p>
+</div></div></section>
+
+<section class="story"><div class="wrap"><div class="grid">
+  <div class="chest">
+    <div class="drawer">
+      <blockquote data-lang="lv">„Pirms gadiem 16 vecāmamma man mantojumā atstāja vecu kumodi un lika apsolīt, ka to neizmetīšu ārā un, lai kur būtu pati, ņemšu sev līdzi.”</blockquote>
+      <blockquote data-lang="ru" hidden>«Лет шестнадцать назад бабушка оставила мне в наследство старый комод и взяла обещание, что я его не выброшу и, где бы ни была, возьму с собой.»</blockquote>
+      <blockquote data-lang="en" hidden>“Sixteen years ago my grandmother left me an old chest of drawers and made me promise never to throw it out — wherever I went, it would come with me.”</blockquote>
+      <cite><span data-lang="lv">Indra Nikrence · līdzīpašniece</span><span data-lang="ru" hidden>Индра Никренце · совладелица · перевод</span><span data-lang="en" hidden>Indra Nikrence · co-owner · translated</span></cite>
+    </div>
+    <div class="drawer">
+      <span class="cap"><span data-lang="lv">Kā tapa telpa</span><span data-lang="ru" hidden>Как появилось это место</span><span data-lang="en" hidden>How the room came to be</span></span>
+      <p data-lang="lv">Kad radās ideja par konditoreju, kumode nāca līdzi. Dizainerei pateicām: mums ir kumode, vecs, apaļš galds un pavisam neliels budžets. Tā radās no veciem kokiem darinātie galdi un vecu dēļu siena.</p>
+      <p data-lang="ru" hidden>Когда появилась идея кондитерской, комод переехал вместе с ней. Дизайнеру сказали: у нас есть комод, старый круглый стол и совсем небольшой бюджет. Так появились столы из старого дерева и стена из старых досок.</p>
+      <p data-lang="en" hidden>When the idea of a confectionery came, the chest came along. The designer was told: we have a chest of drawers, an old round table and a very small budget. That is how the tables of old wood and the wall of old boards came to be.</p>
+    </div>
+    <div class="drawer">
+      <span class="cap"><span data-lang="lv">Kopš 2014</span><span data-lang="ru" hidden>С 2014 года</span><span data-lang="en" hidden>Since 2014</span></span>
+      <p data-lang="lv">Blaumaņa iela 7 · SIA „Beze moka” · pēc intervijas Swedbank blogā, 2019. gadā.</p>
+      <p data-lang="ru" hidden>Ул. Блауманя 7 · SIA „Beze moka” · по интервью в блоге Swedbank, 2019.</p>
+      <p data-lang="en" hidden>Blaumaņa iela 7 · SIA „Beze moka” · after the Swedbank blog interview, 2019.</p>
+    </div>
+  </div>
+  <figure><img src="img/interior.jpg" alt="Bezē telpa: koka galdi, tāfeles, lete" loading="lazy" width="1080" height="1440"><figcaption class="tag"><span data-lang="lv">pie letes</span><span data-lang="ru" hidden>у прилавка</span><span data-lang="en" hidden>at the counter</span></figcaption></figure>
+</div></div></section>
+
+<section class="order" id="pasutit"><div class="wrap"><div class="grid">
+  <div>
+    <div data-lang="lv"><span class="cap" style="color:#ffd2dc">Pēc pasūtījuma</span><h2>Kūka uz jūsu dienu.</h2><p class="lead">Dzimšanas dienām, kolēģiem, svētkiem. Ar uzrakstu, ar ogām, arī bez laktozes. Piegāde Rīgā.</p>
+      <blockquote>„Pasūtījām bezlaktozes šokolādes kūku ar piegādi Rīgā dzimšanas dienai — un bijām sajūsmā!”<cite>Google atsauksme</cite></blockquote></div>
+    <div data-lang="ru" hidden><span class="cap" style="color:#ffd2dc">На заказ</span><h2>Торт к вашему дню.</h2><p class="lead">На дни рождения, для коллег, к праздникам. С надписью, с ягодами, есть и без лактозы. Доставка по Риге.</p>
+      <blockquote>«Заказали безлактозный шоколадный торт с доставкой по Риге на день рождения — и были в восторге!»<cite>Отзыв в Google · перевод</cite></blockquote></div>
+    <div data-lang="en" hidden><span class="cap" style="color:#ffd2dc">To order</span><h2>A cake for your day.</h2><p class="lead">Birthdays, colleagues, celebrations. With an inscription, with berries, lactose-free too. Delivery in Riga.</p>
+      <blockquote>“We ordered a lactose-free chocolate cake delivered in Riga for a birthday — and we were delighted!”<cite>Google review · translated</cite></blockquote></div>
+  </div>
+  <div class="comp">
+    <span class="cap"><span data-lang="lv">Kāda kūka</span><span data-lang="ru" hidden>Какой торт</span><span data-lang="en" hidden>Which cake</span></span>
+    <div class="chips" data-k="cake"></div>
+    <span class="cap"><span data-lang="lv">Cik lielai kompānijai</span><span data-lang="ru" hidden>На какую компанию</span><span data-lang="en" hidden>For how many</span></span>
+    <div class="chips" data-k="size"></div>
+    <span class="cap"><span data-lang="lv">Uz kuru dienu</span><span data-lang="ru" hidden>На какой день</span><span data-lang="en" hidden>For which day</span></span>
+    <input type="date" id="date">
+    <span class="cap"><span data-lang="lv">Uzraksts uz kūkas (ja vajag)</span><span data-lang="ru" hidden>Надпись на торте (если нужна)</span><span data-lang="en" hidden>Inscription (if any)</span></span>
+    <input id="text">
+    <div class="preview">
+      <span class="cap"><span data-lang="lv">Ziņa, ko saņems Bezē</span><span data-lang="ru" hidden>Сообщение для Bezē</span><span data-lang="en" hidden>The message Bezē receives</span></span>
+      <pre id="msg"></pre>
+      <div class="send"><a class="btn wa" id="wa" href="#" rel="noopener"><span data-lang="lv">Sūtīt WhatsApp</span><span data-lang="ru" hidden>Отправить в WhatsApp</span><span data-lang="en" hidden>Send on WhatsApp</span></a><a class="btn" href="tel:+37122033883"><span data-lang="lv">Zvanīt 22 033 883</span><span data-lang="ru" hidden>Позвонить 22 033 883</span><span data-lang="en" hidden>Call 22 033 883</span></a></div>
+      <p class="tiny"><span data-lang="lv">Ziņa top jūsu ierīcē — šī lapa neko neglabā un nevienam nesūta jūsu vietā.</span><span data-lang="ru" hidden>Сообщение создаётся на вашем устройстве — страница ничего не хранит и никому не отправляет за вас.</span><span data-lang="en" hidden>The message is composed on your device — this page stores nothing and sends nothing on your behalf.</span></p>
+    </div>
+  </div>
+</div></div></section>
+
+<section class="guests"><div class="wrap">
+  <div class="head">
+    <h2><span data-lang="lv">Viesi raksta</span><span data-lang="ru" hidden>Гости пишут</span><span data-lang="en" hidden>Guests write</span></h2>
+    <div class="sticker"><b>4,7</b><span data-lang="lv">639 atsauksmes · Google</span><span data-lang="ru" hidden>639 отзывов · Google</span><span data-lang="en" hidden>639 reviews · Google</span></div>
+  </div>
+  <div class="qs">
+    <div class="q" data-lang="lv"><span class="cap">Pistāciju kūka</span><p>„Katram reiz nobaudīt pistāciju kūku no Bezē ir must have.”</p><span>Google</span></div>
+    <div class="q" data-lang="lv"><span class="cap">Kūka kolēģiem</span><p>„Pasūtīju burkānkūku savā dzimšanas dienā, ar ko pacienāt kolēģus. Visi slavēja, jautāja, kur tik gardu kūku esmu nopirkusi.”</p><span>Google</span></div>
+    <div class="q" data-lang="lv"><span class="cap">Kafejnīca</span><p>„Jauka maza konditoreja-kafejnīca. … Pārdevējas smaidošas un laipnas.”</p><span>Google</span></div>
+    <div class="q" data-lang="ru" hidden><span class="cap">Фисташковый торт</span><p>«Каждому стоит хоть раз попробовать фисташковый торт из Bezē — это must have.»</p><span>Google · перевод</span></div>
+    <div class="q" data-lang="ru" hidden><span class="cap">Торт для коллег</span><p>«Морковный торт на мой день рождения, чтобы угостить коллег. Все хвалили и спрашивали, где куплен такой вкусный торт.»</p><span>Google · перевод</span></div>
+    <div class="q" data-lang="ru" hidden><span class="cap">Кафе</span><p>«Милая маленькая кондитерская-кафе. … Продавщицы улыбчивые и приветливые.»</p><span>Google · перевод</span></div>
+    <div class="q" data-lang="en" hidden><span class="cap">Pistachio cake</span><p>“Everyone should try the pistachio cake from Bezē at least once — it’s a must.”</p><span>Google · translated</span></div>
+    <div class="q" data-lang="en" hidden><span class="cap">A cake for colleagues</span><p>“I ordered a carrot cake for my birthday to treat my colleagues. Everyone praised it and asked where I’d bought such a delicious cake.”</p><span>Google · translated</span></div>
+    <div class="q" data-lang="en" hidden><span class="cap">The café</span><p>“A lovely little confectionery-café. … The staff are smiling and kind.”</p><span>Google · translated</span></div>
+  </div>
+</div></section>
+
+<section class="visit"><div class="wrap">
+  <h2><span data-lang="lv">Kur mēs esam</span><span data-lang="ru" hidden>Где мы</span><span data-lang="en" hidden>Where we are</span></h2>
+  <div class="places">
+    <div class="place">
+      <span class="cap"><span data-lang="lv">Konditoreja</span><span data-lang="ru" hidden>Кондитерская</span><span data-lang="en" hidden>Confectionery</span></span>
+      <h3>Blaumaņa iela 7</h3><p class="sub">Rīga, LV-1010</p>
+      <p class="hrs"><span data-lang="lv"><b>P–Pk 8–21</b> · S, Sv 10–19</span><span data-lang="ru" hidden><b>Пн–Пт 8–21</b> · Сб, Вс 10–19</span><span data-lang="en" hidden><b>Mon–Fri 8–21</b> · Sat, Sun 10–19</span></p>
+      <div class="acts"><a class="btn fill" href="tel:+37122033883"><span data-lang="lv">Zvanīt · 22 033 883</span><span data-lang="ru" hidden>Позвонить · 22 033 883</span><span data-lang="en" hidden>Call · 22 033 883</span></a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Blauma%C5%86a+iela+7%2C+R%C4%ABga" rel="noopener"><span data-lang="lv">Karte ↗</span><span data-lang="ru" hidden>Карта ↗</span><span data-lang="en" hidden>Map ↗</span></a><a class="btn" href="https://wolt.com/en/lva/riga/venue/bez-konditoreja" rel="noopener">Wolt ↗</a></div>
+    </div>
+    <div class="place small">
+      <span class="cap">Beze coffee</span>
+      <h3>Brīvības iela 76</h3><p class="sub">Rīga, LV-1010</p>
+      <p class="hrs"><span data-lang="lv">P–Pk 8–21 · S, Sv 10–19</span><span data-lang="ru" hidden>Пн–Пт 8–21 · Сб, Вс 10–19</span><span data-lang="en" hidden>Mon–Fri 8–21 · Sat, Sun 10–19</span></p>
+      <div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Beze+coffee+Br%C4%ABv%C4%ABbas+iela+76%2C+R%C4%ABga" rel="noopener"><span data-lang="lv">Karte ↗</span><span data-lang="ru" hidden>Карта ↗</span><span data-lang="en" hidden>Map ↗</span></a></div>
+    </div>
+  </div>
+  <p class="links"><a href="https://www.instagram.com/bezekonditorejaunkulinarija" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/bezekonditorejaunkulinarija/" rel="noopener">Facebook ↗</a><a href="https://wolt.com/en/lva/riga/venue/bez-konditoreja" rel="noopener">Wolt ↗</a></p>
+  <div class="next" data-lang="lv"><span class="cap" style="color:#d9c39a">Ja šis priekšlikums interesē — nākamie soļi</span><p>Google fotogrāfiju vietā jūsu pašu attēli · cenas un kūku klāsts precizēts ar jums · Google kartes poga „Vietne” ved uz šo lapu, nevis uz Facebook.</p></div>
+  <div class="next" data-lang="ru" hidden><span class="cap" style="color:#d9c39a">Если предложение интересно — следующие шаги</span><p>Ваши собственные фотографии вместо снимков из Google · цены и ассортимент уточняются с вами · кнопка «Сайт» в Google Картах ведёт на эту страницу, а не в Facebook.</p></div>
+  <div class="next" data-lang="en" hidden><span class="cap" style="color:#d9c39a">If this proposal is of interest — next steps</span><p>Your own photographs instead of Google ones · prices and the cake range confirmed with you · the Google Maps "Website" button leads here instead of Facebook.</p></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><b>SIA „Beze moka”</b> · Reģ. Nr. 40103855964 · Blaumaņa iela 7, Rīga, LV-1010 · +371 22 033 883<br>
+  <span data-lang="lv">Fotogrāfijas: Bezē (kūka, pistāciju kūciņa) un viesi Google Maps — Vineta K, Anastasia Chu, Oskars Zusmanis, Gary Seybold, Iwona Pocięgiel, S Anwar · Fasāde: Google Street View (2025) · Dizaina priekšlikums: Nikita · ngoloveckis@gmail.com</span>
+  <span data-lang="ru" hidden>Фотографии: Bezē (торт, фисташковое пирожное) и гости Google Maps — Vineta K, Anastasia Chu, Oskars Zusmanis, Gary Seybold, Iwona Pocięgiel, S Anwar · Фасад: Google Street View (2025) · Дизайн-предложение: Nikita · ngoloveckis@gmail.com</span>
+  <span data-lang="en" hidden>Photographs: Bezē (the cake, the pistachio pastry) and guests on Google Maps — Vineta K, Anastasia Chu, Oskars Zusmanis, Gary Seybold, Iwona Pocięgiel, S Anwar · Storefront: Google Street View (2025) · Design proposal: Nikita · ngoloveckis@gmail.com</span></div></footer>
+<div class="sticky"><a href="#pasutit"><span data-lang="lv">Pasūtīt kūku</span><span data-lang="ru" hidden>Заказать торт</span><span data-lang="en" hidden>Order a cake</span></a><a href="tel:+37122033883"><span data-lang="lv">Zvanīt</span><span data-lang="ru" hidden>Позвонить</span><span data-lang="en" hidden>Call</span></a></div>
+
+<script>
+const T={
+ lv:{cake:['Šokolādes ar ogām','Burkānkūka','Medus kūka','Pistāciju','Bez laktozes','Cita'],size:['Mazai kompānijai','Vidējai','Lielai'],hi:'Labdien! Vēlos pasūtīt kūku.',c:'Kūka: ',s:'Kompānija: ',d:'Uz dienu: ',t:'Uzraksts: ',q:'Vai tas ir iespējams un cik maksātu?',dph:''},
+ ru:{cake:['Шоколадный с ягодами','Морковный','Медовик','Фисташковый','Без лактозы','Другой'],size:['Небольшая компания','Средняя','Большая'],hi:'Здравствуйте! Хочу заказать торт.',c:'Торт: ',s:'Компания: ',d:'На день: ',t:'Надпись: ',q:'Возможно ли это и сколько будет стоить?'},
+ en:{cake:['Chocolate with berries','Carrot cake','Honey cake','Pistachio','Lactose-free','Other'],size:['A small party','Medium','Large'],hi:'Hello! I would like to order a cake.',c:'Cake: ',s:'Party: ',d:'For: ',t:'Inscription: ',q:'Is that possible, and what would it cost?'}};
+let lang='lv';const S={cake:-1,size:-1};
+function chips(){document.querySelectorAll('.chips').forEach(g=>{const k=g.dataset.k;g.innerHTML='';T[lang][k].forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.setAttribute('aria-pressed',String(S[k]===i));b.onclick=()=>{S[k]=S[k]===i?-1:i;chips();draw();};g.appendChild(b);});});}
+function fmt(v){if(!v)return '';const [y,m,d]=v.split('-');return lang==='en'?`${d}/${m}/${y}`:`${d}.${m}.${y}`;}
+function draw(){const t=T[lang],L=[t.hi];L.push(t.c+(S.cake>-1?t.cake[S.cake].toLowerCase():'—'));if(S.size>-1)L.push(t.s+t.size[S.size].toLowerCase());
+  const dv=fmt(document.getElementById('date').value);if(dv)L.push(t.d+dv);const tx=document.getElementById('text').value.trim();if(tx)L.push(t.t+'„'+tx+'”');L.push(t.q);
+  const m=L.join('\n');document.getElementById('msg').textContent=m;document.getElementById('wa').href='https://wa.me/37122033883?text='+encodeURIComponent(m);}
+function set(l){lang=l;document.querySelectorAll('[data-lang]').forEach(el=>{el.hidden=el.dataset.lang!==l});document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.set===l)));document.documentElement.lang=l;chips();draw();openNow();}
+document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>set(b.dataset.set)));
+['date','text'].forEach(id=>document.getElementById(id).addEventListener('input',draw));
+(function(){const d=new Date();d.setDate(d.getDate()+2);document.getElementById('date').min=d.toISOString().slice(0,10);})();
+// open-now (Rīga time; hours as listed on Google Maps)
+function openNow(){try{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Riga',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  const g=k=>parts.find(x=>x.type===k).value,dd=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),m=(+g('hour'))*60+(+g('minute'));
+  const H={0:[10,19],1:[8,21],2:[8,21],3:[8,21],4:[8,21],5:[8,21],6:[10,19]},h=H[dd],open=m>=h[0]*60&&m<h[1]*60,nh=H[(dd+1)%7];
+  const L={lv:{o:'Šobrīd atvērts — līdz ',t:'Šobrīd slēgts — atveram šodien ',r:'Šobrīd slēgts — atveram rīt '},ru:{o:'Сейчас открыто — до ',t:'Сейчас закрыто — откроемся сегодня в ',r:'Сейчас закрыто — откроемся завтра в '},en:{o:'Open now — until ',t:'Closed now — opening today at ',r:'Closed now — opening tomorrow at '}};
+  ['lv','ru','en'].forEach(l=>{const el=document.getElementById('now-'+l);el.textContent=open?L[l].o+h[1]+':00':(m<h[0]*60?L[l].t+h[0]+':00':L[l].r+nh[0]+':00');el.classList.toggle('shut',!open);el.hidden=(l!==lang);});}catch(e){}}
+set('lv');
+</script>
+</body>
+</html>
